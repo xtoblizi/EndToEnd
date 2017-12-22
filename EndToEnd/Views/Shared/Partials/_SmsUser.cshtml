@@ -1,0 +1,146 @@
+﻿@using EndToEnd.Extensions;
+@using Microsoft.AspNet.Identity
+
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="~/Theme/dist/img/user.svg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>@User.Identity.GetFirstName()</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li id="left-sidebar-menu-dashboard" class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Profile</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Edit","SmsUsers" , new {id=User.Identity.GetUserId()})"><i class="fa fa-circle-o"></i> Edit Profile Subscribers</a></li>
+                    @*<li id="left-sidebar-menu-dashboard-dashboardV2"><a href="@Url.Action("AddPhoneNumber", "Manage" ,  new {id= User.Identity.GetUserId()}))"><i class="fa fa-circle-o"></i> Add PhoneNumber Subscribers</a></li>*@
+                    <li id="left-sidebar-menu-dashboard-dashboardV3"><a href="@Url.Action("ChangePassword", "Manage" , new {id= User.Identity.GetUserId()})"><i class="fa fa-circle-o"></i> Change Password</a></li>
+
+
+                </ul>
+            </li>
+            <li id="left-sidebar-menu-charts" class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Token Actions</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-charts-chartjs"><a href="@Url.Action("Create", "PurchaseSms")"><i class="fa fa-circle-o"></i> Purchase Token</a></li>
+                    <li id="left-sidebar-menu-charts-morris"><a href="@Url.Action("UserIndex", "UserTokenBalances" , new {id = User.Identity.GetUserId()})"><i class="fa fa-circle-o"></i> Check TokenBalance</a></li>
+                    <li id="left-sidebar-menu-charts-flot"><a href="@Url.Action("CurrentRate", "CreateChargeRates")"><i class="fa fa-circle-o"></i> Check CurrentRates</a></li>
+
+                </ul>
+            </li>
+            <li id="left-sidebar-menu-charts" class="treeview">
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Sms Actions</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-charts-chartjs"><a href="@Url.Action("Create","SendSms")"><i class="fa fa-circle-o"></i> Send SmsToSingle</a></li>
+                    <li id="left-sidebar-menu-charts-morris"><a class="disable_href" href="@Url.Action("#", "#")"><i class="fa fa-circle-o"></i> Send SmsToMany</a></li>
+                    <li id="left-sidebar-menu-charts-flot"><a class="disable_href" href="@Url.Action("#", "#")"><i class="fa fa-circle-o"></i> Send ToExcel List</a></li>
+
+                </ul>
+            </li>
+            <li id="left-sidebar-menu-tables" class="treeview">
+                <a href="#">
+                    <i class="fa fa-table"></i> <span>Payment</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-examples-login"><a href="@Url.Action("Create", "PurchaseSms")"><i class="fa fa-circle-o"></i> Buy SmsToken</a></li>
+                    <li id="left-sidebar-menu-tables-simple"><a href="@Url.Action("Create", "Purchases")"><i class="fa fa-circle-o"></i> Make Payment</a></li>
+                    <li id="left-sidebar-menu-tables-data"><a href="@Url.Action("Details", "BankDetails")"><i class="fa fa-circle-o"></i> Bank Details</a></li>
+                </ul>
+            </li>
+            <li id="left-sidebar-menu-widgets">
+                <a href="#" class="disable_href">
+                    <i class="fa fa-th"></i> <span>Email Actions</span>
+                    <small class="label pull-right bg-green">Coming Soon</small>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-charts-chartj"><a href="#"><i class="fa fa-circle-o"></i> Send EmailToSingle</a></li>
+                    <li id="left-sidebar-menu-charts-morri"><a href="#"><i class="fa fa-circle-o"></i> Send EmailToMany</a></li>
+                    <li id="left-sidebar-menu-charts-flots"><a href="#"><i class="fa fa-circle-o"></i> Send Email ToExcel-List</a></li>
+
+                </ul>
+            </li>
+
+
+            <li id="left-sidebar-menu-forms" class="treeview">
+                <a href="#">
+                    <i class="fa fa-edit"></i> <span>Accountability</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <!--Note  to include sorting in all 3 controller actions -->
+                    <li id="left-sidebar-menu-forms-general"><a class="disable_href" href="@Url.Action("General", "Forms")"><i class="fa fa-circle-o"></i> All Token Purchase</a></li>
+                    <li id="left-sidebar-menu-forms-advanced"><a class="disable_href" href="@Url.Action("Advanced", "Forms")"><i class="fa fa-circle-o"></i>View Payments </a></li>
+                    <li id="left-sidebar-menu-forms-editors"><a class="disable_href" href="@Url.Action("Editors", "Forms")"><i class="fa fa-circle-o"></i>  All Token Transactions</a></li>
+
+                </ul>
+            </li>
+
+            <li id="left-sidebar-menu-examples" class="treeview">
+                <a href="#">
+                    <i class="fa fa-folder"></i> <span>Transaction Reports</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-examples-invoice"><a class="disable_href" href="@Url.Action("SmsUserIndex", "SmsPurchaseTransactions")"><i class="fa fa-circle-o"></i> Sms Purchases</a></li>
+                    <li id="left-sidebar-menu-examples-profileex"><a class="disable_href" href="@Url.Action("SmsUserIndex", "Puchases")"><i class="fa fa-circle-o"></i> All Payments</a></li>
+
+                    @*<li id="left-sidebar-menu-examples-register"><a href="@Url.Action("Register", "Examples")"><i class="fa fa-circle-o"></i> Register</a></li>
+                        <li id="left-sidebar-menu-examples-lockscreen"><a href="@Url.Action("Lockscreen", "Examples")"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                        <li id="left-sidebar-menu-examples-p404"><a href="@Url.Action("P404", "Examples")"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                        <li id="left-sidebar-menu-examples-p500"><a href="@Url.Action("P500", "Examples")"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                        <li id="left-sidebar-menu-examples-blank"><a href="@Url.Action("Blank", "Examples")"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                        <li id="left-sidebar-menu-examples-pace"><a href="@Url.Action("Pace", "Examples")"><i class="fa fa-circle-o"></i> Pace Page</a></li>*@
+                </ul>
+            </li>
+            <li id="left-sidebar-menu-elements" class="treeview">
+                <a href="#">
+                    <i class="fa fa-laptop"></i>
+                    <span>Support</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="left-sidebar-menu-elements-general"><a href="@Url.Action("Send", "Support")"><i class="fa fa-circle-o"></i> Send Support Tickets</a></li>
+                    <li id="left-sidebar-menu-elements-icons"><a href="@Url.Action("SmsUserIndex", "Elements")"><i class="fa fa-circle-o"></i> View Your SupportTickets</a></li>
+                </ul>
+            </li>
+
+            <li id="left-sidebar-menu-documentation">
+                <a href="@Url.Action("Documentation", "Home")">
+                    <i class="fa fa-book"></i>
+                    <span>User Usage Guide</span>
+                </a>
+            </li>
+            @*<li class="header">LABELS</li>
+                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>*@
+        </ul>
+    </section>
+</aside>
+<link href="~/Content/Site.css" rel="stylesheet" />

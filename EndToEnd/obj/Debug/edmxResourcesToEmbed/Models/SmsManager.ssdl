@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmsManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_BankDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SMSPurchaseTransactionID" Type="int" Nullable="false" />
+    <Property Name="BankCode" Type="nvarchar(max)" />
+    <Property Name="BankName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="ContactMobile" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="LunchDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_ConfirmPurchase">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="StatusOfPurchase" Type="nvarchar(max)" />
+    <Property Name="DateOfPayment" Type="datetime" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tbl_PurchaseType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PuchaseTypeID" Type="int" />
+    <Property Name="PurchaseType" Type="nvarchar(max)" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BankCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_SMSAmount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="SMSUnit" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_SMSPurchaseTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseTypeID" Type="int" />
+    <Property Name="BankCode" Type="nvarchar(max)" />
+    <Property Name="PurchaseType" Type="nvarchar(max)" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="SMSUnit" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="StatusOfPurchase" Type="nvarchar(max)" />
+    <Property Name="PurchasedBy" Type="nvarchar(max)" />
+    <Property Name="Mobile" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_StaffDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankCode" Type="nvarchar(max)" />
+    <Property Name="StaffCode" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="GradeLevel_Position" Type="nvarchar(max)" />
+    <Property Name="ContactMobile" Type="nvarchar(max)" />
+    <Property Name="ContactEmail" Type="nvarchar(max)" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="UserPassword" Type="nvarchar(max)" />
+    <Property Name="UserTypeID" Type="int" Nullable="false" />
+    <Property Name="SMSPurchaseTransactionID" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="TokenID" Type="int" />
+    <Property Name="AuthID" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_StaffLogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="ActivityLogType" Type="nvarchar(max)" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="DateTimeAction" Type="datetime" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_StatusID">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_UserType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserType" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblAuthentication">
+    <Key>
+      <PropertyRef Name="AuthID" />
+    </Key>
+    <Property Name="AuthID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TblToken">
+    <Key>
+      <PropertyRef Name="TokenID" />
+    </Key>
+    <Property Name="TokenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="12" />
+  </EntityType>
+  <Association Name="FK_dbo_Tbl_BankDetails_dbo_Tbl_SMSPurchaseTransaction_Tbl_SMSPurchaseTransaction_Id">
+    <End Role="Tbl_SMSPurchaseTransaction" Type="Self.Tbl_SMSPurchaseTransaction" Multiplicity="1" />
+    <End Role="Tbl_BankDetails" Type="Self.Tbl_BankDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_SMSPurchaseTransaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tbl_BankDetails">
+        <PropertyRef Name="SMSPurchaseTransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Tbl_SMSPurchaseTransaction_dbo_Tbl_PurchaseType_Tbl_PurcahseType_ID">
+    <End Role="Tbl_PurchaseType" Type="Self.Tbl_PurchaseType" Multiplicity="0..1" />
+    <End Role="Tbl_SMSPurchaseTransaction" Type="Self.Tbl_SMSPurchaseTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_PurchaseType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tbl_SMSPurchaseTransaction">
+        <PropertyRef Name="PurchaseTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Tbl_StaffDetails_dbo_Tbl_SMSPurchaseTransaction_Tbl_SMSPurchaseTransaction_Id">
+    <End Role="Tbl_SMSPurchaseTransaction" Type="Self.Tbl_SMSPurchaseTransaction" Multiplicity="1" />
+    <End Role="Tbl_StaffDetails" Type="Self.Tbl_StaffDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_SMSPurchaseTransaction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tbl_StaffDetails">
+        <PropertyRef Name="SMSPurchaseTransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tbl_StaffDetails_TblAuthentication">
+    <End Role="TblAuthentication" Type="Self.TblAuthentication" Multiplicity="0..1" />
+    <End Role="Tbl_StaffDetails" Type="Self.Tbl_StaffDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblAuthentication">
+        <PropertyRef Name="AuthID" />
+      </Principal>
+      <Dependent Role="Tbl_StaffDetails">
+        <PropertyRef Name="AuthID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tbl_StaffDetails_TblTokenID">
+    <End Role="TblToken" Type="Self.TblToken" Multiplicity="0..1" />
+    <End Role="Tbl_StaffDetails" Type="Self.Tbl_StaffDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblToken">
+        <PropertyRef Name="TokenID" />
+      </Principal>
+      <Dependent Role="Tbl_StaffDetails">
+        <PropertyRef Name="TokenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblToken_TblToken">
+    <End Role="TblToken" Type="Self.TblToken" Multiplicity="1" />
+    <End Role="TblToken1" Type="Self.TblToken" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TblToken">
+        <PropertyRef Name="TokenID" />
+      </Principal>
+      <Dependent Role="TblToken1">
+        <PropertyRef Name="TokenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SmsManagerModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_BankDetails" EntityType="Self.Tbl_BankDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_ConfirmPurchase" EntityType="Self.Tbl_ConfirmPurchase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_PurchaseType" EntityType="Self.Tbl_PurchaseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_SMSAmount" EntityType="Self.Tbl_SMSAmount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_SMSPurchaseTransaction" EntityType="Self.Tbl_SMSPurchaseTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_StaffDetails" EntityType="Self.Tbl_StaffDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_StaffLogin" EntityType="Self.Tbl_StaffLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_StatusID" EntityType="Self.Tbl_StatusID" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_UserType" EntityType="Self.Tbl_UserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAuthentication" EntityType="Self.TblAuthentication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblToken" EntityType="Self.TblToken" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Tbl_BankDetails_dbo_Tbl_SMSPurchaseTransaction_Tbl_SMSPurchaseTransaction_Id" Association="Self.FK_dbo_Tbl_BankDetails_dbo_Tbl_SMSPurchaseTransaction_Tbl_SMSPurchaseTransaction_Id">
+      <End Role="Tbl_SMSPurchaseTransaction" EntitySet="Tbl_SMSPurchaseTransaction" />
+      <End Role="Tbl_BankDetails" EntitySet="Tbl_BankDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Tbl_SMSPurchaseTransaction_dbo_Tbl_PurchaseType_Tbl_PurcahseType_ID" Association="Self.FK_dbo_Tbl_SMSPurchaseTransaction_dbo_Tbl_PurchaseType_Tbl_PurcahseType_ID">
+      <End Role="Tbl_PurchaseType" EntitySet="Tbl_PurchaseType" />
+      <End Role="Tbl_SMSPurchaseTransaction" EntitySet="Tbl_SMSPurchaseTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Tbl_StaffDetails_dbo_Tbl_SMSPurchaseTransaction_Tbl_SMSPurchaseTransaction_Id" Association="Self.FK_dbo_Tbl_StaffDetails_dbo_Tbl_SMSPurchaseTransaction_Tbl_SMSPurchaseTransaction_Id">
+      <End Role="Tbl_SMSPurchaseTransaction" EntitySet="Tbl_SMSPurchaseTransaction" />
+      <End Role="Tbl_StaffDetails" EntitySet="Tbl_StaffDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tbl_StaffDetails_TblAuthentication" Association="Self.FK_Tbl_StaffDetails_TblAuthentication">
+      <End Role="TblAuthentication" EntitySet="TblAuthentication" />
+      <End Role="Tbl_StaffDetails" EntitySet="Tbl_StaffDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tbl_StaffDetails_TblTokenID" Association="Self.FK_Tbl_StaffDetails_TblTokenID">
+      <End Role="TblToken" EntitySet="TblToken" />
+      <End Role="Tbl_StaffDetails" EntitySet="Tbl_StaffDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblToken_TblToken" Association="Self.FK_TblToken_TblToken">
+      <End Role="TblToken" EntitySet="TblToken" />
+      <End Role="TblToken1" EntitySet="TblToken" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

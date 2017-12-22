@@ -1,0 +1,65 @@
+﻿@model IEnumerable<EndToEnd.Models.SmsUser>
+
+@{
+    ViewBag.Title = "List Active Subcribers to Deativate";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DesiredNameForSms)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesiredNameForSms)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+
+            <td>
+
+                @Html.ActionLink("Deactivate", "Deativate", new { id=item.SmsUserId }) |
+
+            </td>
+        </tr>
+    }
+
+</table>

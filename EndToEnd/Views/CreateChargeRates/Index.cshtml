@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EndToEnd.Models.CreateChargeRate>
+
+@{
+    ViewBag.Title = "List of TokenUnits Charges";
+}
+
+<h4>
+    <span style="text-decoration: underline; font-size: 1.2em; color: darkblue;font-weight: bold">Note:</span> &nbsp;&nbsp;
+
+        This list of charge created is
+        sorted by the date starting from the last Created. (descending order)
+</h4>
+<br /> <br/>
+<p>
+    <b> @Html.ActionLink("Change/Create Charge for Sms Tokens", "Create") </b>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SmsUnit.SmsUnitName)
+        </th>
+        <th>
+            @Html.DisplayName("Amount (#)")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EffectedBy)
+        </th>
+
+        <th>
+            @Html.DisplayName("Date Created")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmsUnit.SmsUnitName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffectedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CreateChargeRateId }) |
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.CreateChargeRateId })
+            </td>
+        </tr>
+    }
+
+</table>

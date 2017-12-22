@@ -1,0 +1,58 @@
+﻿@model EndToEnd.Models.UserTokenBalance
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>UserTokenBalance</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.SmsUser.DesiredNameForSms)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SmsUser.DesiredNameForSms)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AmountBalance)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AmountBalance)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TokenBalance)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TokenBalance)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Datecreated)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Datecreated)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.UserTokenBalanceId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

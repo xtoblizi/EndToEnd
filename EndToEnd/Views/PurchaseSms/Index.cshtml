@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EndToEnd.Models.PurchaseSms>
+
+@{
+    ViewBag.Title = "List of Sms Purchases";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Sms Unit Name")
+        </th>
+        <th>
+            @Html.DisplayName("Purchased By")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SmsUnit.SmsUnitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SmsUser.DesiredNameForSms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+
+
+        <td>
+
+                 @Html.ActionLink("Delete", "Delete", new { id=item.PurchaseSmsId })
+        </td>
+    </tr>
+}
+
+</table>

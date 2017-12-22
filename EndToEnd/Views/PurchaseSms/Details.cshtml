@@ -1,0 +1,42 @@
+﻿@model EndToEnd.Models.PurchaseSms
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PurchaseSms</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SmsUnit.EnteredBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmsUnit.EnteredBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmsUser.DesiredNameForSms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmsUser.DesiredNameForSms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseSmsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

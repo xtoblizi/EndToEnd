@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FinCore Messaging</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    @Styles.Render("~/Theme/bootstrap/css")
+    @Styles.Render("~/Theme/plugins/font-awesome/css")
+    @Styles.Render("~/Theme/plugins/ionicons/css")
+    @Styles.Render("~/Theme/dist/css")
+    @Styles.Render("~/Theme/plugins/icheck/css/sqare/blue")
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition login-page">
+
+
+    @RenderBody();
+
+    <hr/>
+<footer style="text-align: center; font-size: 15px;font-weight: bold">
+
+    <p>&copy; @DateTime.Now.Year - FinCore Messaging . Designed By : <a href="http://www.silicongatesoftware.com">Silicon Gates Software Company</a></p>
+
+</footer>
+
+
+@Scripts.Render("~/Theme/plugins/jquery/js")
+@Scripts.Render("~/Theme/bootstrap/js")
+@Scripts.Render("~/Theme/plugins/icheck/js")
+@Scripts.Render("~/Theme/plugins/jquery-validate/js")
+@Scripts.Render("~/Scripts/Account/Login")
+
+    @RenderSection("scripts", required:false)
+
+</body>
+</html>

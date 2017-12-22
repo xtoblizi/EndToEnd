@@ -1,0 +1,149 @@
+E:\sms\EndToEnd\bin\roslyn\csc.exe
+E:\sms\EndToEnd\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\sms\EndToEnd\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\sms\EndToEnd\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\sms\EndToEnd\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\sms\EndToEnd\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\sms\EndToEnd\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\sms\EndToEnd\bin\roslyn\System.Collections.Immutable.dll
+E:\sms\EndToEnd\bin\roslyn\System.Reflection.Metadata.dll
+E:\sms\EndToEnd\bin\roslyn\vbc.exe
+E:\sms\EndToEnd\bin\roslyn\VBCSCompiler.exe
+E:\sms\EndToEnd\bin\roslyn\VBCSCompiler.exe.config
+E:\sms\EndToEnd\bin\EndToEnd.dll.config
+E:\sms\EndToEnd\bin\EndToEnd.dll
+E:\sms\EndToEnd\bin\EndToEnd.pdb
+E:\sms\EndToEnd\bin\Antlr3.Runtime.dll
+E:\sms\EndToEnd\bin\EntityFramework.dll
+E:\sms\EndToEnd\bin\EntityFramework.SqlServer.dll
+E:\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Core.dll
+E:\sms\EndToEnd\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\sms\EndToEnd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Cookies.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Facebook.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Google.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.OAuth.dll
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Twitter.dll
+E:\sms\EndToEnd\bin\Microsoft.Web.Infrastructure.dll
+E:\sms\EndToEnd\bin\Newtonsoft.Json.dll
+E:\sms\EndToEnd\bin\Owin.dll
+E:\sms\EndToEnd\bin\PagedList.dll
+E:\sms\EndToEnd\bin\PagedList.Mvc.dll
+E:\sms\EndToEnd\bin\System.Web.Helpers.dll
+E:\sms\EndToEnd\bin\System.Web.Mvc.dll
+E:\sms\EndToEnd\bin\System.Web.Optimization.dll
+E:\sms\EndToEnd\bin\System.Web.Razor.dll
+E:\sms\EndToEnd\bin\System.Web.WebPages.Deployment.dll
+E:\sms\EndToEnd\bin\System.Web.WebPages.dll
+E:\sms\EndToEnd\bin\System.Web.WebPages.Razor.dll
+E:\sms\EndToEnd\bin\WebGrease.dll
+E:\sms\EndToEnd\bin\EntityFramework.xml
+E:\sms\EndToEnd\bin\EntityFramework.SqlServer.xml
+E:\sms\EndToEnd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\sms\EndToEnd\bin\PagedList.xml
+E:\sms\EndToEnd\bin\PagedList.Mvc.xml
+E:\sms\EndToEnd\bin\System.Web.Helpers.xml
+E:\sms\EndToEnd\bin\System.Web.Mvc.xml
+E:\sms\EndToEnd\bin\System.Web.Optimization.xml
+E:\sms\EndToEnd\bin\System.Web.Razor.xml
+E:\sms\EndToEnd\bin\System.Web.WebPages.xml
+E:\sms\EndToEnd\bin\System.Web.WebPages.Deployment.xml
+E:\sms\EndToEnd\bin\System.Web.WebPages.Razor.xml
+E:\sms\EndToEnd\bin\Antlr3.Runtime.pdb
+E:\sms\EndToEnd\bin\Newtonsoft.Json.xml
+E:\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Core.xml
+E:\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\sms\EndToEnd\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Facebook.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Cookies.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.OAuth.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Google.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.Twitter.xml
+E:\sms\EndToEnd\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\sms\EndToEnd\obj\Release\EndToEnd.Migrations.InitialCreate.resources
+E:\sms\EndToEnd\obj\Release\EndToEnd.csproj.GenerateResource.Cache
+E:\sms\EndToEnd\obj\Release\EndToEnd.dll
+E:\sms\EndToEnd\obj\Release\EndToEnd.pdb
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\csc.exe
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\vbc.exe
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\VBCSCompiler.exe
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EndToEnd.dll.config
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EndToEnd.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EndToEnd.pdb
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Antlr3.Runtime.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EntityFramework.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EntityFramework.SqlServer.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Newtonsoft.Json.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Owin.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\PagedList.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\PagedList.Mvc.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Helpers.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Mvc.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Optimization.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Razor.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.WebPages.Deployment.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.WebPages.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.WebPages.Razor.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\WebGrease.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EntityFramework.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\EntityFramework.SqlServer.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\PagedList.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\PagedList.Mvc.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Helpers.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Mvc.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Optimization.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.Razor.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.WebPages.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.WebPages.Deployment.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\System.Web.WebPages.Razor.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Antlr3.Runtime.pdb
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Newtonsoft.Json.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\obj\Release\EndToEnd.dll
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\obj\Release\EndToEnd.pdb
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\obj\Release\EndToEnd.csprojResolveAssemblyReference.cache
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\obj\Release\EndToEnd.Migrations.init.resources
+C:\Users\silicon\Documents\Visual Studio 2015\Projects\sms\EndToEnd\obj\Release\EndToEnd.csproj.GenerateResource.Cache

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<EndToEnd.Models.SmsUser>
+
+@{
+    ViewBag.Title = "Activate An Sms User";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+}
+else
+{
+    <h3> <span style="font-size: 1.1em;color: darkblue"> Note: </span>The checkbox signifies whether a user is activated or not</h3>
+
+}
+
+
+<br/>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DesiredNameForSms)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+
+        <td>
+            @Html.DisplayNameFor(model =>model.Activated)
+        </td>
+
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesiredNameForSms)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Activated)
+            </td>
+
+            <td>
+
+                @Html.ActionLink("Activate", "ActivateAction") |
+
+            </td>
+            @*<td>
+
+                @Html.ActionLink("Activate", "ActivateAction", new { id = item.SmsUserId }) |
+
+            </td>*@
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,42 @@
+﻿@using EndToEnd.Extensions
+@using Microsoft.AspNet.Identity
+
+
+<div>
+
+
+    <h2>
+        FinCore Messaging Welcomes you <b>Admin</b>.
+    </h2>
+
+    <h4> You have all functionalities of a bonafide Administrator  </h4>
+    <h4> Note : All functionalities on the menu link that are italized are currently disabled as they being worked on. Thanks </h4>
+    <h4> Note: Also data available on the portal are demo data...</h4>
+    <br/>
+    <div style="font-size: 1.50em">
+        <h4>Administrative Dashboard Parameter SetUp ReadMe Below.</h4>
+
+        <h4 style="text-decoration: underline; font-weight: bold">Application Flow</h4>
+        Admins need to create/set Sms app usage parameters on the following as aspects
+        <p style="font-size: 14px">
+        <article>
+            <section>
+                1. Set up token Units varieties.
+                Note : While creating Sms Unit make sure to give it a descriptive name at the sms Unit Name field.
+                Note: Make sure to create a sms unit (Token) of unit value of 1(one). This would be used as a measure to
+                calculate the sms charge of other Token unit.
+                <br /> <br />
+            </section>
+            <section>
+                2. Set up charge rate of the Sms uints. (Note user must set up the charge rate for the Token with value of
+                *. Then this would be used to calculate the other sms charge rates.
+                If certain amount of Token Unit would have a diiferent charge rate , then admin can create a charge rate for the Token Unit
+
+            </section>
+        </article>
+        </p>
+    </div>
+
+</div>
+
+

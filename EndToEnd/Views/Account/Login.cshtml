@@ -1,0 +1,60 @@
+﻿@model EndToEnd.Models.LoginViewModel
+@{
+    Layout = "~/Views/Shared/_LoginRegister.cshtml";
+    ViewBag.Title = "Log in";
+}
+
+
+
+<div class="login-box">
+    <h3> @ViewBag.Message</h3>
+
+    <div class="login-logo">
+        <a href="@Url.Action("Index", "Home")"> <b style="text-decoration: underline">FINCORE MESSAGING </b></a>
+    </div>
+    <hr/>
+    <div class="login-box-body">
+        <p class="login-box-msg"><b style="color: deepskyblue; font-size: 1.5em">Login </b>
+        </p> <br/>
+        @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {role = "form"}))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            <div class="form-group has-feedback">
+                @Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = "Email"})
+                @Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                @Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = "Password"})
+                @Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                </div>
+            </div>
+        }
+        <div class="social-auth-links text-center">
+            <p>- OR -</p>
+            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
+                <i class="fa fa-facebook"></i> Sign in using
+                Facebook
+            </a><br/>
+            <a href="#" class="btn btn-block btn-social btn-google btn-flat">
+                <i class="fa fa-google-plus"></i> Sign in using
+                Google+
+            </a><br/><br/>
+        </div>
+        <a href="@Url.Action("ForgotPassword")">I forgot my password</a><br> <br/>
+        <a href="@Url.Action("RegisterSmsUser", "Account")" class="text-center">Register as a new user</a>
+    </div>
+</div>
+

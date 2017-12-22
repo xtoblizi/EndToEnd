@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+<!--//content-inner-->
+
+
+<!--/sidebar-menu-->
+
+
+    <!-- Sidebar Links  Start-->
+
+    @if (User.IsInRole("Administrator"))
+    {
+        @Html.Partial("~/Views/Home/HomePartials/_AdminHome.cshtml")
+    }
+    else if (User.IsInRole("Staff"))
+    {
+        @Html.Partial("~/Views/Home/HomePartials/_StaffHome.cshtml")
+    }
+
+    else if (User.IsInRole("Company"))
+    {
+        @Html.Partial("~/Views/Home/HomePartials/_CompanyHome.cshtml")
+    }
+
+    else if (User.IsInRole("SmsUser"))
+    {
+        @Html.Partial("~/Views/Home/HomePartials/_SmsUserHome.cshtml")
+    }
+
+
+    <!-- Sidebar Links End-->
+
+
+
+
+

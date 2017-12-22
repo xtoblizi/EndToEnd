@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EndToEnd.Models.UserTokenBalance>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SmsUser.DesiredNameForSms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TokenBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datecreated)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmsUser.DesiredNameForSms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TokenBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datecreated)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.UserTokenBalanceId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.UserTokenBalanceId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.UserTokenBalanceId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

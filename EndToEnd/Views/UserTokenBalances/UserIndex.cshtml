@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EndToEnd.Models.UserTokenBalance>
+
+@{
+    ViewBag.Title = "Token Balance Record";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+
+<div>
+    <h3>
+        <span> Your Current Balance is :</span>  <button> @ViewBag.CurrentBalance </button>
+    </h3>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SmsUser.DesiredNameForSms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AmountBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TokenBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Datecreated)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SmsUser.DesiredNameForSms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AmountBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TokenBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Datecreated)
+        </td>
+        <td>
+
+        </td>
+    </tr>
+}
+
+    <p>
+        @Html.ActionLink("Buy Token Unit", "Create")
+    </p>
+
+
+</table>
+

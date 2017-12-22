@@ -1,0 +1,43 @@
+﻿@model EndToEnd.Models.SmsUnit
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SmsUnit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EnteredBy.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnteredBy.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SmsUnitId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

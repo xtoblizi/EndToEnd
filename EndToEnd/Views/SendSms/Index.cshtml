@@ -1,0 +1,56 @@
+﻿@model IEnumerable<EndToEnd.Models.SendSms>
+
+@{
+    ViewBag.Title = "List Of Sms Sent";
+}
+
+<h4>&nbsp;</h4>
+
+<p>
+    @Html.ActionLink("Send New Sms", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Sent To")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayName("Sent By")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MsgHeader)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AunthenticationId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SendTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SendFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MsgHeader)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AunthenticationId)
+        </td>
+        <td>
+
+            @Html.ActionLink("Delete", "Delete", new { id=item.SendSmsId })
+        </td>
+    </tr>
+}
+
+</table>

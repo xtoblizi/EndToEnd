@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SMSWebApplication</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="TfinCore Messaging , Bulk Sms Solution, Fincore Messaging Jose" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#228B22">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("FinCoreMsg", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Administration", "Index", "Admin")</li>
+                            <li>@Html.ActionLink("ConfirmTokenPurchase", "Index", "ConfirmPurchases")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Details<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("PurchaseTransacts", "Index", "SMSPurchaseTransactions")</li>
+                            <li>@Html.ActionLink("UserTokenBalance", "Index", "UserTokenBalances")</li>
+                            <li>@Html.ActionLink("BankDetails", "Index", "BankDetails")</li>
+                            <li>@Html.ActionLink("StaffDetails", "Index", "Staffs")</li>
+                        </ul>
+                       </li>
+                    <li>@Html.ActionLink("Reports", "Reports", "Home")</li>
+                    }
+                    @if (ViewContext.HttpContext.User.IsInRole("BankStaff"))
+                    {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Details<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("ConfirmPurchase", "Index", "ConfirmPurchases")</li>
+                            <li>@Html.ActionLink("TokenBalance", "Index", "UserTokenBalances")</li>
+                            <li>@Html.ActionLink("BankDetails", "Index", "BankDetails")</li>
+                            <li>@Html.ActionLink("StaffDetails", "Index", "Staffs")</li>
+                        </ul>
+                       </li>
+                            <li>@Html.ActionLink("PurchaseType", "index", "Purchases")</li>
+                            <li>@Html.ActionLink("TokenBalance","Index", "UserTokenBalances")</li>
+                    }
+                    @if (ViewContext.HttpContext.User.IsInRole("User"))
+                    {
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("TokenBalance", "Index", "UserTokenBalances")</li>
+                            <li>@Html.ActionLink("PurchaseTransaction", "Index", "SMSPurchaseTransactions")</li>
+                            <li>@Html.ActionLink("Buy More Credit", "BuyCredit", "Home")</li>
+                        </ul>
+                       </li>
+
+                    }
+                </ul>
+                        @Html.Partial("_LoginPartial")
+</div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - FinCore Messaging</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
